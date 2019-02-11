@@ -1,0 +1,7 @@
+{
+    "id":"voiceterminal",
+    "description":"Голосовой терминал",
+    "url":"",
+    "cross":true,
+	"version":"0.0.1"
+}

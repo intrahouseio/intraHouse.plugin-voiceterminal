@@ -1,0 +1,67 @@
+{
+  "id": "voiceterminal",
+  "description": "Голосовой терминал",
+  "gendevices": 0,
+  "module": "voiceterminal.js",
+  "restartOnChannelsChange": 1,
+  "params": [
+    {
+      "name": "host",
+      "note": "IP терминала",
+      "type": "string",
+      "val": "127.0.0.1"
+    },
+    {
+      "name": "port",
+      "note": "Порт терминала",
+      "type": "number",
+      "val": "7999"
+    },
+    {
+      "name": "lport",
+      "note": "Слушающий порт на сервере",
+      "type": "number",
+      "val": "8999"
+    }
+  ],
+
+  "extrapattern": [
+    {
+      "name": "request",
+      "note": "Входящее от голосового терминала",
+      "type": "string"
+    },
+    {
+      "name": "response",
+      "note": "Передать в ответ",
+      "type": "string"
+    },
+    {
+      "name": "fullurl",
+      "note": "Выполнить запрос",
+      "type": "string"
+    },
+    {
+      "name": "startscene",
+      "note": "Запустить сценарий",
+      "type": "droplist",
+      "data": "listfromworkscenes" 
+    },
+    {
+      "name": "arg",
+      "note": "Параметр сценария",
+      "type": "string",
+      "visible": "data.startscene"
+    }
+  ],
+
+  "extradefault": {
+    "request": "/command.php?qry=текст",
+    "response": "7:2",
+    "fullurl": "",
+    "startscene":"",
+    "arg":""
+  },
+
+  "actions": [{}]
+}
